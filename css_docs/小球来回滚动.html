@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>小球来回滚动动画 | 卷心菜的笔记</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/myBlog/logo.jpg">
+    <meta name="description" content="我的个人网站">
+    
+    <link rel="preload" href="/myBlog/assets/css/0.styles.94ac365d.css" as="style"><link rel="preload" href="/myBlog/assets/js/app.32b125a5.js" as="script"><link rel="preload" href="/myBlog/assets/js/2.71aee22e.js" as="script"><link rel="preload" href="/myBlog/assets/js/14.d1eb19d3.js" as="script"><link rel="prefetch" href="/myBlog/assets/js/10.3d25eb47.js"><link rel="prefetch" href="/myBlog/assets/js/11.ab73ac07.js"><link rel="prefetch" href="/myBlog/assets/js/12.c93b5f8f.js"><link rel="prefetch" href="/myBlog/assets/js/13.46142694.js"><link rel="prefetch" href="/myBlog/assets/js/15.4f3be701.js"><link rel="prefetch" href="/myBlog/assets/js/16.d3a50c19.js"><link rel="prefetch" href="/myBlog/assets/js/17.1782e791.js"><link rel="prefetch" href="/myBlog/assets/js/18.aedf8fc2.js"><link rel="prefetch" href="/myBlog/assets/js/19.52f93c66.js"><link rel="prefetch" href="/myBlog/assets/js/20.945ea81e.js"><link rel="prefetch" href="/myBlog/assets/js/21.68742e5e.js"><link rel="prefetch" href="/myBlog/assets/js/22.e4862435.js"><link rel="prefetch" href="/myBlog/assets/js/23.b84bc457.js"><link rel="prefetch" href="/myBlog/assets/js/24.7d95266b.js"><link rel="prefetch" href="/myBlog/assets/js/25.e2bca76f.js"><link rel="prefetch" href="/myBlog/assets/js/26.6c1b3c9e.js"><link rel="prefetch" href="/myBlog/assets/js/27.777f7e45.js"><link rel="prefetch" href="/myBlog/assets/js/28.4fe055b7.js"><link rel="prefetch" href="/myBlog/assets/js/29.e9f55299.js"><link rel="prefetch" href="/myBlog/assets/js/3.108c6b96.js"><link rel="prefetch" href="/myBlog/assets/js/30.d8ce14ab.js"><link rel="prefetch" href="/myBlog/assets/js/31.2acce8ba.js"><link rel="prefetch" href="/myBlog/assets/js/32.363d94d6.js"><link rel="prefetch" href="/myBlog/assets/js/33.338651a6.js"><link rel="prefetch" href="/myBlog/assets/js/34.4df04394.js"><link rel="prefetch" href="/myBlog/assets/js/35.444fbcbb.js"><link rel="prefetch" href="/myBlog/assets/js/36.550492c4.js"><link rel="prefetch" href="/myBlog/assets/js/37.b071b233.js"><link rel="prefetch" href="/myBlog/assets/js/38.f72cc43c.js"><link rel="prefetch" href="/myBlog/assets/js/39.743b401e.js"><link rel="prefetch" href="/myBlog/assets/js/4.b2fb6724.js"><link rel="prefetch" href="/myBlog/assets/js/40.7633404e.js"><link rel="prefetch" href="/myBlog/assets/js/41.9ba2ac1e.js"><link rel="prefetch" href="/myBlog/assets/js/42.2cdc200d.js"><link rel="prefetch" href="/myBlog/assets/js/43.f1d47857.js"><link rel="prefetch" href="/myBlog/assets/js/44.e243ce38.js"><link rel="prefetch" href="/myBlog/assets/js/45.a2d5f6f5.js"><link rel="prefetch" href="/myBlog/assets/js/46.3521ca2a.js"><link rel="prefetch" href="/myBlog/assets/js/47.3a7c7136.js"><link rel="prefetch" href="/myBlog/assets/js/48.197d2a7c.js"><link rel="prefetch" href="/myBlog/assets/js/49.5e2e4744.js"><link rel="prefetch" href="/myBlog/assets/js/5.437538ff.js"><link rel="prefetch" href="/myBlog/assets/js/50.79047c1c.js"><link rel="prefetch" href="/myBlog/assets/js/51.5d83f071.js"><link rel="prefetch" href="/myBlog/assets/js/52.bc93cc4a.js"><link rel="prefetch" href="/myBlog/assets/js/53.ea4ac953.js"><link rel="prefetch" href="/myBlog/assets/js/54.f2c29859.js"><link rel="prefetch" href="/myBlog/assets/js/55.9ab739c5.js"><link rel="prefetch" href="/myBlog/assets/js/56.962bd4e7.js"><link rel="prefetch" href="/myBlog/assets/js/57.76eba6f4.js"><link rel="prefetch" href="/myBlog/assets/js/58.34f41ce8.js"><link rel="prefetch" href="/myBlog/assets/js/59.95fec2e7.js"><link rel="prefetch" href="/myBlog/assets/js/6.227c43d9.js"><link rel="prefetch" href="/myBlog/assets/js/60.ac8b84f4.js"><link rel="prefetch" href="/myBlog/assets/js/61.56373d52.js"><link rel="prefetch" href="/myBlog/assets/js/62.b2dbafb4.js"><link rel="prefetch" href="/myBlog/assets/js/63.f97f80e6.js"><link rel="prefetch" href="/myBlog/assets/js/64.7d6f4123.js"><link rel="prefetch" href="/myBlog/assets/js/65.e0130689.js"><link rel="prefetch" href="/myBlog/assets/js/66.1ac41917.js"><link rel="prefetch" href="/myBlog/assets/js/67.5d5c6567.js"><link rel="prefetch" href="/myBlog/assets/js/68.752b8f0c.js"><link rel="prefetch" href="/myBlog/assets/js/69.c8c67836.js"><link rel="prefetch" href="/myBlog/assets/js/7.11bc8d9a.js"><link rel="prefetch" href="/myBlog/assets/js/70.80d68f41.js"><link rel="prefetch" href="/myBlog/assets/js/8.d109144b.js"><link rel="prefetch" href="/myBlog/assets/js/9.49c8893d.js">
+    <link rel="stylesheet" href="/myBlog/assets/css/0.styles.94ac365d.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/myBlog/" class="home-link router-link-active"><!----> <span class="site-name">卷心菜的笔记</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/myBlog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/myBlog/js_docs/" class="nav-link">
+  JS
+</a></div><div class="nav-item"><a href="/myBlog/css_docs/" class="nav-link router-link-active">
+  CSS
+</a></div><div class="nav-item"><a href="/myBlog/vue_docs/" class="nav-link">
+  Vue
+</a></div><div class="nav-item"><a href="/myBlog/ts_docs/" class="nav-link">
+  TS
+</a></div><div class="nav-item"><a href="/myBlog/uni_docs/" class="nav-link">
+  Uni
+</a></div><div class="nav-item"><a href="/myBlog/node_docs/" class="nav-link">
+  Node
+</a></div><div class="nav-item"><a href="/myBlog/other/" class="nav-link">
+  啥都有
+</a></div><div class="nav-item"><a href="/myBlog/painting/" class="nav-link">
+  朋友的画
+</a></div><div class="nav-item"><a href="https://github.com/zeroonbush/blog.git" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/myBlog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/myBlog/js_docs/" class="nav-link">
+  JS
+</a></div><div class="nav-item"><a href="/myBlog/css_docs/" class="nav-link router-link-active">
+  CSS
+</a></div><div class="nav-item"><a href="/myBlog/vue_docs/" class="nav-link">
+  Vue
+</a></div><div class="nav-item"><a href="/myBlog/ts_docs/" class="nav-link">
+  TS
+</a></div><div class="nav-item"><a href="/myBlog/uni_docs/" class="nav-link">
+  Uni
+</a></div><div class="nav-item"><a href="/myBlog/node_docs/" class="nav-link">
+  Node
+</a></div><div class="nav-item"><a href="/myBlog/other/" class="nav-link">
+  啥都有
+</a></div><div class="nav-item"><a href="/myBlog/painting/" class="nav-link">
+  朋友的画
+</a></div><div class="nav-item"><a href="https://github.com/zeroonbush/blog.git" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/myBlog/css_docs/" aria-current="page" class="sidebar-link">css简介</a></li><li><a href="/myBlog/css_docs/一些css片段.html" class="sidebar-link">常用css片段</a></li><li><a href="/myBlog/css_docs/鼠标点击水波效果.html" class="sidebar-link">鼠标点击水波效果</a></li><li><a href="/myBlog/css_docs/小球来回滚动.html" class="active sidebar-link">小球来回滚动动画</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/myBlog/css_docs/纯css实现一个菜单的隐藏显示功能.html" class="sidebar-link">纯css实现一个菜单的隐藏显示功能</a></li><li><a href="/myBlog/css_docs/CSS媒体查询.html" class="sidebar-link">10分钟回顾CSS媒体查询</a></li><li><a href="/myBlog/css_docs/三角形的css画法.html" class="sidebar-link">三角形(triangle)的css画法</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="小球来回滚动动画"><a href="#小球来回滚动动画" class="header-anchor">#</a> 小球来回滚动动画</h1> <h3 id="动画效果"><a href="#动画效果" class="header-anchor">#</a> 动画效果</h3> <img src="https://blog-1257233417.cos.ap-nanjing.myqcloud.com/ball_scroll.gif" alt="" style="width:400px;"> <h3 id="代码实现"><a href="#代码实现" class="header-anchor">#</a> 代码实现</h3> <h4 id="html"><a href="#html" class="header-anchor">#</a> html</h4> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>ball<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>6<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h4 id="css"><a href="#css" class="header-anchor">#</a> css</h4> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">.ball</span> <span class="token punctuation">{</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span>
+    <span class="token property">line-height</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span>
+    <span class="token property">border-radius</span><span class="token punctuation">:</span> 50%<span class="token punctuation">;</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span> orange<span class="token punctuation">;</span>
+    <span class="token property">font-size</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+    <span class="token property">text-align</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+    <span class="token property">cursor</span><span class="token punctuation">:</span> pointer<span class="token punctuation">;</span>
+    <span class="token property">animation-name</span><span class="token punctuation">:</span> scroll<span class="token punctuation">;</span>
+    <span class="token property">animation-duration</span><span class="token punctuation">:</span> 2s<span class="token punctuation">;</span>
+    <span class="token property">animation-timing-function</span><span class="token punctuation">:</span> linear<span class="token punctuation">;</span>
+    <span class="token property">animation-delay</span><span class="token punctuation">:</span> 2s<span class="token punctuation">;</span>
+    <span class="token property">animation-iteration-count</span><span class="token punctuation">:</span> infinite<span class="token punctuation">;</span>
+    <span class="token property">animation-direction</span><span class="token punctuation">:</span> alternate<span class="token punctuation">;</span> 
+    <span class="token comment">/* animation: scroll 2s linear 2s infinite alternate; 或者用这个简写属性表示上面6个属性 */</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.ball:hover</span> <span class="token punctuation">{</span>
+    <span class="token property">animation-play-state</span><span class="token punctuation">:</span> paused<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token atrule"><span class="token rule">@keyframes</span> scroll</span> <span class="token punctuation">{</span>
+    <span class="token selector">0%</span> <span class="token punctuation">{</span>
+        <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">translateX</span><span class="token punctuation">(</span>0<span class="token punctuation">)</span> <span class="token function">rotate</span><span class="token punctuation">(</span>0deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token selector">100%</span> <span class="token punctuation">{</span>
+        <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">translateX</span><span class="token punctuation">(</span>300px<span class="token punctuation">)</span> <span class="token function">rotate</span><span class="token punctuation">(</span>720deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p><code>animation</code> 属性是一个简写属性,用于设置6个动画属性.</p> <ul><li>animation-name: 要绑定到选择器上的<code>keyframe</code>名称</li> <li>animation-duration: 动画完成时间</li> <li>animation-timing-function: 动画速度曲线</li> <li>animation-delay: 动画开始之前的延迟时间</li> <li>animation-iteration-count: 动画播放次数</li> <li>animation-direction: 是否反向播放动画;</li></ul> <h3 id="兼容性"><a href="#兼容性" class="header-anchor">#</a> 兼容性</h3> <p>IE9及更早的版本不支持 <code>animation</code> 动画</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/myBlog/css_docs/鼠标点击水波效果.html" class="prev">
+        鼠标点击水波效果
+      </a></span> <span class="next"><a href="/myBlog/css_docs/纯css实现一个菜单的隐藏显示功能.html">
+        纯css实现一个菜单的隐藏显示功能
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/myBlog/assets/js/app.32b125a5.js" defer></script><script src="/myBlog/assets/js/2.71aee22e.js" defer></script><script src="/myBlog/assets/js/14.d1eb19d3.js" defer></script>
+  </body>
+</html>

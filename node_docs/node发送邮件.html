@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>node发送邮件功能的实现 | 卷心菜的笔记</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/myBlog/logo.jpg">
+    <meta name="description" content="我的个人网站">
+    
+    <link rel="preload" href="/myBlog/assets/css/0.styles.94ac365d.css" as="style"><link rel="preload" href="/myBlog/assets/js/app.32b125a5.js" as="script"><link rel="preload" href="/myBlog/assets/js/2.71aee22e.js" as="script"><link rel="preload" href="/myBlog/assets/js/48.197d2a7c.js" as="script"><link rel="prefetch" href="/myBlog/assets/js/10.3d25eb47.js"><link rel="prefetch" href="/myBlog/assets/js/11.ab73ac07.js"><link rel="prefetch" href="/myBlog/assets/js/12.c93b5f8f.js"><link rel="prefetch" href="/myBlog/assets/js/13.46142694.js"><link rel="prefetch" href="/myBlog/assets/js/14.d1eb19d3.js"><link rel="prefetch" href="/myBlog/assets/js/15.4f3be701.js"><link rel="prefetch" href="/myBlog/assets/js/16.d3a50c19.js"><link rel="prefetch" href="/myBlog/assets/js/17.1782e791.js"><link rel="prefetch" href="/myBlog/assets/js/18.aedf8fc2.js"><link rel="prefetch" href="/myBlog/assets/js/19.52f93c66.js"><link rel="prefetch" href="/myBlog/assets/js/20.945ea81e.js"><link rel="prefetch" href="/myBlog/assets/js/21.68742e5e.js"><link rel="prefetch" href="/myBlog/assets/js/22.e4862435.js"><link rel="prefetch" href="/myBlog/assets/js/23.b84bc457.js"><link rel="prefetch" href="/myBlog/assets/js/24.7d95266b.js"><link rel="prefetch" href="/myBlog/assets/js/25.e2bca76f.js"><link rel="prefetch" href="/myBlog/assets/js/26.6c1b3c9e.js"><link rel="prefetch" href="/myBlog/assets/js/27.777f7e45.js"><link rel="prefetch" href="/myBlog/assets/js/28.4fe055b7.js"><link rel="prefetch" href="/myBlog/assets/js/29.e9f55299.js"><link rel="prefetch" href="/myBlog/assets/js/3.108c6b96.js"><link rel="prefetch" href="/myBlog/assets/js/30.d8ce14ab.js"><link rel="prefetch" href="/myBlog/assets/js/31.2acce8ba.js"><link rel="prefetch" href="/myBlog/assets/js/32.363d94d6.js"><link rel="prefetch" href="/myBlog/assets/js/33.338651a6.js"><link rel="prefetch" href="/myBlog/assets/js/34.4df04394.js"><link rel="prefetch" href="/myBlog/assets/js/35.444fbcbb.js"><link rel="prefetch" href="/myBlog/assets/js/36.550492c4.js"><link rel="prefetch" href="/myBlog/assets/js/37.b071b233.js"><link rel="prefetch" href="/myBlog/assets/js/38.f72cc43c.js"><link rel="prefetch" href="/myBlog/assets/js/39.743b401e.js"><link rel="prefetch" href="/myBlog/assets/js/4.b2fb6724.js"><link rel="prefetch" href="/myBlog/assets/js/40.7633404e.js"><link rel="prefetch" href="/myBlog/assets/js/41.9ba2ac1e.js"><link rel="prefetch" href="/myBlog/assets/js/42.2cdc200d.js"><link rel="prefetch" href="/myBlog/assets/js/43.f1d47857.js"><link rel="prefetch" href="/myBlog/assets/js/44.e243ce38.js"><link rel="prefetch" href="/myBlog/assets/js/45.a2d5f6f5.js"><link rel="prefetch" href="/myBlog/assets/js/46.3521ca2a.js"><link rel="prefetch" href="/myBlog/assets/js/47.3a7c7136.js"><link rel="prefetch" href="/myBlog/assets/js/49.5e2e4744.js"><link rel="prefetch" href="/myBlog/assets/js/5.437538ff.js"><link rel="prefetch" href="/myBlog/assets/js/50.79047c1c.js"><link rel="prefetch" href="/myBlog/assets/js/51.5d83f071.js"><link rel="prefetch" href="/myBlog/assets/js/52.bc93cc4a.js"><link rel="prefetch" href="/myBlog/assets/js/53.ea4ac953.js"><link rel="prefetch" href="/myBlog/assets/js/54.f2c29859.js"><link rel="prefetch" href="/myBlog/assets/js/55.9ab739c5.js"><link rel="prefetch" href="/myBlog/assets/js/56.962bd4e7.js"><link rel="prefetch" href="/myBlog/assets/js/57.76eba6f4.js"><link rel="prefetch" href="/myBlog/assets/js/58.34f41ce8.js"><link rel="prefetch" href="/myBlog/assets/js/59.95fec2e7.js"><link rel="prefetch" href="/myBlog/assets/js/6.227c43d9.js"><link rel="prefetch" href="/myBlog/assets/js/60.ac8b84f4.js"><link rel="prefetch" href="/myBlog/assets/js/61.56373d52.js"><link rel="prefetch" href="/myBlog/assets/js/62.b2dbafb4.js"><link rel="prefetch" href="/myBlog/assets/js/63.f97f80e6.js"><link rel="prefetch" href="/myBlog/assets/js/64.7d6f4123.js"><link rel="prefetch" href="/myBlog/assets/js/65.e0130689.js"><link rel="prefetch" href="/myBlog/assets/js/66.1ac41917.js"><link rel="prefetch" href="/myBlog/assets/js/67.5d5c6567.js"><link rel="prefetch" href="/myBlog/assets/js/68.752b8f0c.js"><link rel="prefetch" href="/myBlog/assets/js/69.c8c67836.js"><link rel="prefetch" href="/myBlog/assets/js/7.11bc8d9a.js"><link rel="prefetch" href="/myBlog/assets/js/70.80d68f41.js"><link rel="prefetch" href="/myBlog/assets/js/8.d109144b.js"><link rel="prefetch" href="/myBlog/assets/js/9.49c8893d.js">
+    <link rel="stylesheet" href="/myBlog/assets/css/0.styles.94ac365d.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/myBlog/" class="home-link router-link-active"><!----> <span class="site-name">卷心菜的笔记</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/myBlog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/myBlog/js_docs/" class="nav-link">
+  JS
+</a></div><div class="nav-item"><a href="/myBlog/css_docs/" class="nav-link">
+  CSS
+</a></div><div class="nav-item"><a href="/myBlog/vue_docs/" class="nav-link">
+  Vue
+</a></div><div class="nav-item"><a href="/myBlog/ts_docs/" class="nav-link">
+  TS
+</a></div><div class="nav-item"><a href="/myBlog/uni_docs/" class="nav-link">
+  Uni
+</a></div><div class="nav-item"><a href="/myBlog/node_docs/" class="nav-link router-link-active">
+  Node
+</a></div><div class="nav-item"><a href="/myBlog/other/" class="nav-link">
+  啥都有
+</a></div><div class="nav-item"><a href="/myBlog/painting/" class="nav-link">
+  朋友的画
+</a></div><div class="nav-item"><a href="https://github.com/zeroonbush/blog.git" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/myBlog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/myBlog/js_docs/" class="nav-link">
+  JS
+</a></div><div class="nav-item"><a href="/myBlog/css_docs/" class="nav-link">
+  CSS
+</a></div><div class="nav-item"><a href="/myBlog/vue_docs/" class="nav-link">
+  Vue
+</a></div><div class="nav-item"><a href="/myBlog/ts_docs/" class="nav-link">
+  TS
+</a></div><div class="nav-item"><a href="/myBlog/uni_docs/" class="nav-link">
+  Uni
+</a></div><div class="nav-item"><a href="/myBlog/node_docs/" class="nav-link router-link-active">
+  Node
+</a></div><div class="nav-item"><a href="/myBlog/other/" class="nav-link">
+  啥都有
+</a></div><div class="nav-item"><a href="/myBlog/painting/" class="nav-link">
+  朋友的画
+</a></div><div class="nav-item"><a href="https://github.com/zeroonbush/blog.git" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/myBlog/node_docs/" aria-current="page" class="sidebar-link">关于Node</a></li><li><a href="/myBlog/node_docs/node发送邮件.html" class="active sidebar-link">node发送邮件功能的实现</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/myBlog/node_docs/node发送邮件.html#初始化项目" class="sidebar-link">初始化项目</a></li><li class="sidebar-sub-header"><a href="/myBlog/node_docs/node发送邮件.html#安装插件" class="sidebar-link">安装插件</a></li><li class="sidebar-sub-header"><a href="/myBlog/node_docs/node发送邮件.html#编写代码" class="sidebar-link">编写代码</a></li><li class="sidebar-sub-header"><a href="/myBlog/node_docs/node发送邮件.html#测试结果" class="sidebar-link">测试结果</a></li></ul></li><li><a href="/myBlog/node_docs/exports和module.exports.html" class="sidebar-link">一文搞懂exports和module.exports的关系和区别</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="node发送邮件功能的实现"><a href="#node发送邮件功能的实现" class="header-anchor">#</a> node发送邮件功能的实现</h1> <blockquote><p>很多项目都会有登录功能,登录又分为短信验证码登录和邮箱验证码登录.两者都需要服务端发送随机验证码给客户端,今天我们来实现一个简单的发送邮件的功能吧</p></blockquote> <h2 id="初始化项目"><a href="#初始化项目" class="header-anchor">#</a> 初始化项目</h2> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">mkdir</span> node-mail <span class="token operator">&amp;&amp;</span> <span class="token builtin class-name">cd</span> <span class="token variable">$_</span>
+<span class="token function">yarn</span> init <span class="token parameter variable">-y</span>
+</code></pre></div><p>首先,我们创建一个项目然后进入此项目,并且进行初始化操作</p> <h2 id="安装插件"><a href="#安装插件" class="header-anchor">#</a> 安装插件</h2> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">yarn</span> <span class="token function">add</span> nodemailer
+</code></pre></div><p>安装插件,具体插件的详细说明<a href="https://nodemailer.com/about/" target="_blank" rel="noopener noreferrer">看这里<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <h2 id="编写代码"><a href="#编写代码" class="header-anchor">#</a> 编写代码</h2> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token string">&quot;use strict&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> nodemailer <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'nodemailer'</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> fs <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'fs'</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> path <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'path'</span><span class="token punctuation">)</span>
+
+<span class="token keyword">const</span> transporter <span class="token operator">=</span> nodemailer<span class="token punctuation">.</span><span class="token function">createTransport</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token literal-property property">service</span><span class="token operator">:</span><span class="token string">'163'</span><span class="token punctuation">,</span>  <span class="token comment">//使用的邮箱类型,全部类型可以查看官网</span>
+  <span class="token literal-property property">secureConnection</span><span class="token operator">:</span><span class="token boolean">true</span><span class="token punctuation">,</span>  <span class="token comment">// 使用了SSL</span>
+  <span class="token literal-property property">auth</span><span class="token operator">:</span><span class="token punctuation">{</span>
+    <span class="token literal-property property">user</span><span class="token operator">:</span><span class="token string">'zhangsan_test@163.com'</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">pass</span><span class="token operator">:</span><span class="token string">'xxx'</span><span class="token punctuation">,</span>  <span class="token comment">// 授权码,不是密码,一般可以通过发送短信验证码来获取,且只展示一次,记得保存好</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token keyword">let</span> code <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">substr</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">)</span>  <span class="token comment">//随机生成6位验证码</span>
+
+<span class="token keyword">let</span> mailOptions <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">from</span><span class="token operator">:</span><span class="token string">'zhangsan_test@163.com'</span><span class="token punctuation">,</span>
+  <span class="token comment">// to:'12345@qq.com',  //邮件接收方,单个邮箱 字符串写法</span>
+  <span class="token literal-property property">to</span><span class="token operator">:</span><span class="token punctuation">[</span><span class="token string">'12345@qq.com'</span><span class="token punctuation">,</span><span class="token string">'12346@qq.com'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>  <span class="token comment">//多个邮箱 数组写法</span>
+  <span class="token literal-property property">subject</span><span class="token operator">:</span><span class="token string">'Hello this is zhangsan from zhejiang'</span><span class="token punctuation">,</span>  <span class="token comment">//主题</span>
+  <span class="token literal-property property">text</span><span class="token operator">:</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">您的验证码是</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>code<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">,验证码在10分钟内有效</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span>  <span class="token comment">//正文内容,可以是text文本形式,也可以是一个html页面</span>
+  <span class="token comment">// html:fs.createReadStream(path.resolve(__dirname,'index.html')),  //引用一个html形式,可以在根目录创建一个html文件</span>
+  <span class="token literal-property property">attachments</span><span class="token operator">:</span><span class="token punctuation">[</span>  <span class="token comment">//附件</span>
+    <span class="token punctuation">{</span>
+      <span class="token literal-property property">filename</span><span class="token operator">:</span><span class="token string">'1.png'</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">path</span><span class="token operator">:</span>path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">'images/1.png'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">cid</span><span class="token operator">:</span><span class="token string">&quot;01&quot;</span> 
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token literal-property property">filename</span><span class="token operator">:</span><span class="token string">'1.txt'</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">content</span><span class="token operator">:</span><span class="token string">'Hello world !!!'</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token literal-property property">filename</span><span class="token operator">:</span><span class="token string">'2.txt'</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">path</span><span class="token operator">:</span><span class="token string">'./2.txt'</span> 
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+
+transporter<span class="token punctuation">.</span><span class="token function">sendMail</span><span class="token punctuation">(</span>mailOptions<span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">error<span class="token punctuation">,</span> info</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token punctuation">{</span>code<span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token keyword">if</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>info<span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p><strong>注意:</strong> html里面是可以写样式的,内联样式和行内样式都是可以的.想要引用图片,若图片较小可以转为base64,图片较大则建议使用对象存储,引用cdn.</p> <h2 id="测试结果"><a href="#测试结果" class="header-anchor">#</a> 测试结果</h2> <p>在终端键入 <code>node app.js</code> 查看运行结果,若出现下面的日志,则证明我们的邮件已经发送成功了</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token punctuation">{</span>
+  accepted: <span class="token punctuation">[</span> <span class="token string">'12345@qq.com'</span>, <span class="token string">'12346@qq.com'</span> <span class="token punctuation">]</span>,
+  rejected: <span class="token punctuation">[</span><span class="token punctuation">]</span>,
+  envelopeTime: <span class="token number">726</span>,
+  messageTime: <span class="token number">376</span>,
+  messageSize: <span class="token number">381</span>,
+  response: <span class="token string">'250 Mail OK queued as smtp11,xxxx--.4S2 xxxxx'</span>,
+  envelope: <span class="token punctuation">{</span>
+    from: <span class="token string">'zhangsan_test@163.com'</span>,
+    to: <span class="token punctuation">[</span> <span class="token string">'12345@qq.com'</span>, <span class="token string">'12346@qq.com'</span> <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>,
+  messageId: <span class="token string">'&lt;xxx@163.com&gt;'</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>自此,一个简单的发送邮件的功能就已经完成了.当然,想要运用到真正的业务当中,还需要很多额外的逻辑判断.比如限制发送频率等.</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/myBlog/node_docs/" class="prev router-link-active">
+        关于Node
+      </a></span> <span class="next"><a href="/myBlog/node_docs/exports和module.exports.html">
+        一文搞懂exports和module.exports的关系和区别
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/myBlog/assets/js/app.32b125a5.js" defer></script><script src="/myBlog/assets/js/2.71aee22e.js" defer></script><script src="/myBlog/assets/js/48.197d2a7c.js" defer></script>
+  </body>
+</html>

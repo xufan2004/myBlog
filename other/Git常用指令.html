@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Git常用指令 | 卷心菜的笔记</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/myBlog/logo.jpg">
+    <meta name="description" content="我的个人网站">
+    
+    <link rel="preload" href="/myBlog/assets/css/0.styles.94ac365d.css" as="style"><link rel="preload" href="/myBlog/assets/js/app.32b125a5.js" as="script"><link rel="preload" href="/myBlog/assets/js/2.71aee22e.js" as="script"><link rel="preload" href="/myBlog/assets/js/50.79047c1c.js" as="script"><link rel="prefetch" href="/myBlog/assets/js/10.3d25eb47.js"><link rel="prefetch" href="/myBlog/assets/js/11.ab73ac07.js"><link rel="prefetch" href="/myBlog/assets/js/12.c93b5f8f.js"><link rel="prefetch" href="/myBlog/assets/js/13.46142694.js"><link rel="prefetch" href="/myBlog/assets/js/14.d1eb19d3.js"><link rel="prefetch" href="/myBlog/assets/js/15.4f3be701.js"><link rel="prefetch" href="/myBlog/assets/js/16.d3a50c19.js"><link rel="prefetch" href="/myBlog/assets/js/17.1782e791.js"><link rel="prefetch" href="/myBlog/assets/js/18.aedf8fc2.js"><link rel="prefetch" href="/myBlog/assets/js/19.52f93c66.js"><link rel="prefetch" href="/myBlog/assets/js/20.945ea81e.js"><link rel="prefetch" href="/myBlog/assets/js/21.68742e5e.js"><link rel="prefetch" href="/myBlog/assets/js/22.e4862435.js"><link rel="prefetch" href="/myBlog/assets/js/23.b84bc457.js"><link rel="prefetch" href="/myBlog/assets/js/24.7d95266b.js"><link rel="prefetch" href="/myBlog/assets/js/25.e2bca76f.js"><link rel="prefetch" href="/myBlog/assets/js/26.6c1b3c9e.js"><link rel="prefetch" href="/myBlog/assets/js/27.777f7e45.js"><link rel="prefetch" href="/myBlog/assets/js/28.4fe055b7.js"><link rel="prefetch" href="/myBlog/assets/js/29.e9f55299.js"><link rel="prefetch" href="/myBlog/assets/js/3.108c6b96.js"><link rel="prefetch" href="/myBlog/assets/js/30.d8ce14ab.js"><link rel="prefetch" href="/myBlog/assets/js/31.2acce8ba.js"><link rel="prefetch" href="/myBlog/assets/js/32.363d94d6.js"><link rel="prefetch" href="/myBlog/assets/js/33.338651a6.js"><link rel="prefetch" href="/myBlog/assets/js/34.4df04394.js"><link rel="prefetch" href="/myBlog/assets/js/35.444fbcbb.js"><link rel="prefetch" href="/myBlog/assets/js/36.550492c4.js"><link rel="prefetch" href="/myBlog/assets/js/37.b071b233.js"><link rel="prefetch" href="/myBlog/assets/js/38.f72cc43c.js"><link rel="prefetch" href="/myBlog/assets/js/39.743b401e.js"><link rel="prefetch" href="/myBlog/assets/js/4.b2fb6724.js"><link rel="prefetch" href="/myBlog/assets/js/40.7633404e.js"><link rel="prefetch" href="/myBlog/assets/js/41.9ba2ac1e.js"><link rel="prefetch" href="/myBlog/assets/js/42.2cdc200d.js"><link rel="prefetch" href="/myBlog/assets/js/43.f1d47857.js"><link rel="prefetch" href="/myBlog/assets/js/44.e243ce38.js"><link rel="prefetch" href="/myBlog/assets/js/45.a2d5f6f5.js"><link rel="prefetch" href="/myBlog/assets/js/46.3521ca2a.js"><link rel="prefetch" href="/myBlog/assets/js/47.3a7c7136.js"><link rel="prefetch" href="/myBlog/assets/js/48.197d2a7c.js"><link rel="prefetch" href="/myBlog/assets/js/49.5e2e4744.js"><link rel="prefetch" href="/myBlog/assets/js/5.437538ff.js"><link rel="prefetch" href="/myBlog/assets/js/51.5d83f071.js"><link rel="prefetch" href="/myBlog/assets/js/52.bc93cc4a.js"><link rel="prefetch" href="/myBlog/assets/js/53.ea4ac953.js"><link rel="prefetch" href="/myBlog/assets/js/54.f2c29859.js"><link rel="prefetch" href="/myBlog/assets/js/55.9ab739c5.js"><link rel="prefetch" href="/myBlog/assets/js/56.962bd4e7.js"><link rel="prefetch" href="/myBlog/assets/js/57.76eba6f4.js"><link rel="prefetch" href="/myBlog/assets/js/58.34f41ce8.js"><link rel="prefetch" href="/myBlog/assets/js/59.95fec2e7.js"><link rel="prefetch" href="/myBlog/assets/js/6.227c43d9.js"><link rel="prefetch" href="/myBlog/assets/js/60.ac8b84f4.js"><link rel="prefetch" href="/myBlog/assets/js/61.56373d52.js"><link rel="prefetch" href="/myBlog/assets/js/62.b2dbafb4.js"><link rel="prefetch" href="/myBlog/assets/js/63.f97f80e6.js"><link rel="prefetch" href="/myBlog/assets/js/64.7d6f4123.js"><link rel="prefetch" href="/myBlog/assets/js/65.e0130689.js"><link rel="prefetch" href="/myBlog/assets/js/66.1ac41917.js"><link rel="prefetch" href="/myBlog/assets/js/67.5d5c6567.js"><link rel="prefetch" href="/myBlog/assets/js/68.752b8f0c.js"><link rel="prefetch" href="/myBlog/assets/js/69.c8c67836.js"><link rel="prefetch" href="/myBlog/assets/js/7.11bc8d9a.js"><link rel="prefetch" href="/myBlog/assets/js/70.80d68f41.js"><link rel="prefetch" href="/myBlog/assets/js/8.d109144b.js"><link rel="prefetch" href="/myBlog/assets/js/9.49c8893d.js">
+    <link rel="stylesheet" href="/myBlog/assets/css/0.styles.94ac365d.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/myBlog/" class="home-link router-link-active"><!----> <span class="site-name">卷心菜的笔记</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/myBlog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/myBlog/js_docs/" class="nav-link">
+  JS
+</a></div><div class="nav-item"><a href="/myBlog/css_docs/" class="nav-link">
+  CSS
+</a></div><div class="nav-item"><a href="/myBlog/vue_docs/" class="nav-link">
+  Vue
+</a></div><div class="nav-item"><a href="/myBlog/ts_docs/" class="nav-link">
+  TS
+</a></div><div class="nav-item"><a href="/myBlog/uni_docs/" class="nav-link">
+  Uni
+</a></div><div class="nav-item"><a href="/myBlog/node_docs/" class="nav-link">
+  Node
+</a></div><div class="nav-item"><a href="/myBlog/other/" class="nav-link router-link-active">
+  啥都有
+</a></div><div class="nav-item"><a href="/myBlog/painting/" class="nav-link">
+  朋友的画
+</a></div><div class="nav-item"><a href="https://github.com/zeroonbush/blog.git" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/myBlog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/myBlog/js_docs/" class="nav-link">
+  JS
+</a></div><div class="nav-item"><a href="/myBlog/css_docs/" class="nav-link">
+  CSS
+</a></div><div class="nav-item"><a href="/myBlog/vue_docs/" class="nav-link">
+  Vue
+</a></div><div class="nav-item"><a href="/myBlog/ts_docs/" class="nav-link">
+  TS
+</a></div><div class="nav-item"><a href="/myBlog/uni_docs/" class="nav-link">
+  Uni
+</a></div><div class="nav-item"><a href="/myBlog/node_docs/" class="nav-link">
+  Node
+</a></div><div class="nav-item"><a href="/myBlog/other/" class="nav-link router-link-active">
+  啥都有
+</a></div><div class="nav-item"><a href="/myBlog/painting/" class="nav-link">
+  朋友的画
+</a></div><div class="nav-item"><a href="https://github.com/zeroonbush/blog.git" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/myBlog/other/" aria-current="page" class="sidebar-link">第一篇博客在这里,你找到了吗</a></li><li><a href="/myBlog/other/tool.html" class="sidebar-link">工具篇</a></li><li><a href="/myBlog/other/vuepress搭建个人博客并部署.html" class="sidebar-link">vuepress搭建个人博客并部署</a></li><li><a href="/myBlog/other/Git常用指令.html" class="active sidebar-link">Git常用指令</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/myBlog/other/Git常用指令.html#项目初始化" class="sidebar-link">项目初始化</a></li><li class="sidebar-sub-header"><a href="/myBlog/other/Git常用指令.html#项目关联" class="sidebar-link">项目关联</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/myBlog/other/Git常用指令.html#克隆项目" class="sidebar-link">克隆项目</a></li><li class="sidebar-sub-header"><a href="/myBlog/other/Git常用指令.html#本地项目关联远程仓库" class="sidebar-link">本地项目关联远程仓库</a></li></ul></li><li class="sidebar-sub-header"><a href="/myBlog/other/Git常用指令.html#分支操作" class="sidebar-link">分支操作</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/myBlog/other/Git常用指令.html#查看分支" class="sidebar-link">查看分支</a></li><li class="sidebar-sub-header"><a href="/myBlog/other/Git常用指令.html#切换分支" class="sidebar-link">切换分支</a></li><li class="sidebar-sub-header"><a href="/myBlog/other/Git常用指令.html#拉取分支" class="sidebar-link">拉取分支</a></li><li class="sidebar-sub-header"><a href="/myBlog/other/Git常用指令.html#删除分支" class="sidebar-link">删除分支</a></li><li class="sidebar-sub-header"><a href="/myBlog/other/Git常用指令.html#创建本地新分支并推送到远程" class="sidebar-link">创建本地新分支并推送到远程</a></li><li class="sidebar-sub-header"><a href="/myBlog/other/Git常用指令.html#暂存" class="sidebar-link">暂存</a></li></ul></li><li class="sidebar-sub-header"><a href="/myBlog/other/Git常用指令.html#提交操作" class="sidebar-link">提交操作</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/myBlog/other/Git常用指令.html#代码提交" class="sidebar-link">代码提交</a></li><li class="sidebar-sub-header"><a href="/myBlog/other/Git常用指令.html#查看提交历史" class="sidebar-link">查看提交历史</a></li><li class="sidebar-sub-header"><a href="/myBlog/other/Git常用指令.html#本地代码回滚" class="sidebar-link">本地代码回滚</a></li><li class="sidebar-sub-header"><a href="/myBlog/other/Git常用指令.html#标签功能" class="sidebar-link">标签功能</a></li></ul></li><li class="sidebar-sub-header"><a href="/myBlog/other/Git常用指令.html#配置" class="sidebar-link">配置</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/myBlog/other/Git常用指令.html#config配置" class="sidebar-link">config配置</a></li></ul></li></ul></li><li><a href="/myBlog/other/Markdown语法.html" class="sidebar-link">Markdown语法指南</a></li><li><a href="/myBlog/other/npm发包流程.html" class="sidebar-link">npm发包流程</a></li><li><a href="/myBlog/other/发行ERC20代币.html" class="sidebar-link">如何基于ERC20发行自己的代币</a></li><li><a href="/myBlog/other/Flutter构建Android包.html" class="sidebar-link">Flutter构建Android APP</a></li><li><a href="/myBlog/other/简简单单的来入个deno的门吧.html" class="sidebar-link">deno入门指南</a></li><li><a href="/myBlog/other/移动端300ms延迟以及点击穿透.html" class="sidebar-link">移动端300ms延迟以及点击穿透</a></li><li><a href="/myBlog/other/来了解下字符编码的历史吧.html" class="sidebar-link">来了解下字符编码的历史吧</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="git常用指令"><a href="#git常用指令" class="header-anchor">#</a> Git常用指令</h1> <h2 id="项目初始化"><a href="#项目初始化" class="header-anchor">#</a> 项目初始化</h2> <div class="language- extra-class"><pre class="language-text"><code>git init
+</code></pre></div><p>项目初始化之后会生成一个.git文件,如果看不见,可能是因为电脑隐藏了以.开头的文件</p> <h2 id="项目关联"><a href="#项目关联" class="header-anchor">#</a> 项目关联</h2> <h3 id="克隆项目"><a href="#克隆项目" class="header-anchor">#</a> 克隆项目</h3> <div class="language- extra-class"><pre class="language-text"><code>git clone xxxx // xxxx 表示项目地址
+</code></pre></div><p>表示从远程仓库拉取项目到本地</p> <h3 id="本地项目关联远程仓库"><a href="#本地项目关联远程仓库" class="header-anchor">#</a> 本地项目关联远程仓库</h3> <p>如果我们本地是有项目的,我们想要的是将本地的项目和远程仓库关联起来,那么有如下两种情况</p> <ul><li>本地已有文件与git仓库关联起来(空仓库)</li> <li>本地已有文件与git仓库关联起来(非空仓库:比如有README.md)</li></ul> <p>我们先来看第一种,它的流程是这样的:</p> <div class="language- extra-class"><pre class="language-text"><code>git init
+git remote add origin xxxx
+git add .
+git commit -m 'init'
+git push --set-upstream origin master 或者 git push -u origin master 
+</code></pre></div><p>第二种非空仓库的情况:</p> <div class="language- extra-class"><pre class="language-text"><code>git init
+git remote add origin xxxx
+git add .
+git commit -m 'init'
+git pull origin master --allow-unrelated-histories
+//若有冲突,先解决冲突
+git push --set-upstream origin master
+</code></pre></div><p>可以看出来这两种情况只有在第5步的时候才是有区别的.</p> <p>在上面的commit到本地仓库后,如果直接推送,它会报错:</p> <div class="language- extra-class"><pre class="language-text"><code>refusing to merge unrelated histories
+</code></pre></div><p>意思就是拒绝合并没有历史关系的分支,我们用下面的代码解决这个问题</p> <div class="language- extra-class"><pre class="language-text"><code>git pull origin master --allow-unrelated-histories
+</code></pre></div><p>我们允许拉取没有历史关系的分支,这步也就是我们代码的第5步</p> <h2 id="分支操作"><a href="#分支操作" class="header-anchor">#</a> 分支操作</h2> <h3 id="查看分支"><a href="#查看分支" class="header-anchor">#</a> 查看分支</h3> <div class="language- extra-class"><pre class="language-text"><code>git branch  //查看本地分支
+git branch -r //远程分支
+git branch -a  //本地+远程
+git brnahc -v  //分支最后一次提交的信息
+</code></pre></div><p>在实际项目开发中,往往会有多个任务并行开发,因此从一个基础分支拉取不同分支进行代码编写是常有的事情.</p> <h3 id="切换分支"><a href="#切换分支" class="header-anchor">#</a> 切换分支</h3> <div class="language- extra-class"><pre class="language-text"><code>git branch &lt;BranchName&gt;  //  创建本地分支
+git checkout &lt;BranchName&gt; //切换到对应分支
+git checkout -b&lt;BranchName&gt;r  //创建并切换到对应分支
+</code></pre></div><h3 id="拉取分支"><a href="#拉取分支" class="header-anchor">#</a> 拉取分支</h3> <p>将远程git仓库里的指定分支拉取到本地（本地不存在的分支）</p> <div class="language- extra-class"><pre class="language-text"><code>git checkout -b 本地分支名 origin/远程分支名
+</code></pre></div><h3 id="删除分支"><a href="#删除分支" class="header-anchor">#</a> 删除分支</h3> <div class="language- extra-class"><pre class="language-text"><code>git branch -d &lt;BranchName&gt;  //删除本地分支
+git push origin :&lt;BranchName&gt;(origin后面有空格)  //删除远程分支
+</code></pre></div><h3 id="创建本地新分支并推送到远程"><a href="#创建本地新分支并推送到远程" class="header-anchor">#</a> 创建本地新分支并推送到远程</h3> <div class="language- extra-class"><pre class="language-text"><code>git checkout -b branch1 //创建本地新分支并切换到对应的分支
+git push --set-upstream origin branch1
+</code></pre></div><h3 id="暂存"><a href="#暂存" class="header-anchor">#</a> 暂存</h3> <p>有时候,我们想要切换分支,但是又不想将当前分支代码提交到本地或远程仓库,直接切换过去的话代码会被覆盖,这时候我们可以使用暂存功能</p> <div class="language- extra-class"><pre class="language-text"><code>git stash //存
+git stash pop //取出暂存
+</code></pre></div><h2 id="提交操作"><a href="#提交操作" class="header-anchor">#</a> 提交操作</h2> <h3 id="代码提交"><a href="#代码提交" class="header-anchor">#</a> 代码提交</h3> <div class="language- extra-class"><pre class="language-text"><code>git add .  
+git commit -m 'commit message'
+git push 
+</code></pre></div><p>提交的时候,可以输入emoji表情,可爱又有趣,别人一眼看过来就知道你提交的是关于什么</p> <div class="language- extra-class"><pre class="language-text"><code>:bug: //修复BUG
+:lipstick: //更新样式
+:lock: //解决安全问题
+:recycle: //重构
+:sparkles: //添加新功能
+</code></pre></div><h3 id="查看提交历史"><a href="#查看提交历史" class="header-anchor">#</a> 查看提交历史</h3> <div class="language- extra-class"><pre class="language-text"><code>git log
+git log -3 //显示最近3次的更新
+</code></pre></div><h3 id="本地代码回滚"><a href="#本地代码回滚" class="header-anchor">#</a> 本地代码回滚</h3> <div class="language- extra-class"><pre class="language-text"><code>git reset --hard commit-id //回滚到commit-id 
+git reset --hard HEAD~3 //将最近三次的提交回滚
+git reset --hard HEAD^ //将本地代码回退到上一个版本
+</code></pre></div><h3 id="标签功能"><a href="#标签功能" class="header-anchor">#</a> 标签功能</h3> <p>有时候,我们的项目上线了,我们就需要标签功能,记录我们的版本</p> <div class="language- extra-class"><pre class="language-text"><code>git tag //显示已有的标签
+git tag v1.0.1 //创建一个轻量级标签 
+git tag -a v1.0.2 -m ‘release version’ //创建一个带有标注的标签
+git tag -d tag_name //删除标签
+git push //并不会把tag标签传送到远端服务器上,只有通过显式命令才能分享标签到远端仓库
+git push origin tag_name //push单个tag 
+git push origin --tags //推送所有本地新增的标签 
+</code></pre></div><h2 id="配置"><a href="#配置" class="header-anchor">#</a> 配置</h2> <h3 id="config配置"><a href="#config配置" class="header-anchor">#</a> config配置</h3> <p>最后我们来说一下config配置</p> <div class="language- extra-class"><pre class="language-text"><code>git config --global user.name  //查看全局配置的用户名
+git config --global user.email  //查看全局配置的邮箱
+git config --global user.name 'zhangsha'  //配置全局的用户名
+git config --global user.email 'xx@xx.com'  //配置全局的邮箱
+//下面是针对单独的项目进行配置和查看
+git config user.name 'lisi'  //配置当前项目的用户名
+git config user.name  //查看当前项目的用户名
+git config --list  //查看多个配置
+</code></pre></div><p>配置分为全局配置和项目配置,没有对项目进行单独配置的时候,会默认使用全局的配置.如果我们在一个项目中进行了单独的配置,那么就会使用项目中配置.这个选项在你切换不同项目(比如公司和个人项目)的时候,可以起到一定的作用.</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/myBlog/other/vuepress搭建个人博客并部署.html" class="prev">
+        vuepress搭建个人博客并部署
+      </a></span> <span class="next"><a href="/myBlog/other/Markdown语法.html">
+        Markdown语法指南
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/myBlog/assets/js/app.32b125a5.js" defer></script><script src="/myBlog/assets/js/2.71aee22e.js" defer></script><script src="/myBlog/assets/js/50.79047c1c.js" defer></script>
+  </body>
+</html>

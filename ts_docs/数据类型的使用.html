@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>数据类型的使用 | 卷心菜的笔记</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/myBlog/logo.jpg">
+    <meta name="description" content="我的个人网站">
+    
+    <link rel="preload" href="/myBlog/assets/css/0.styles.94ac365d.css" as="style"><link rel="preload" href="/myBlog/assets/js/app.32b125a5.js" as="script"><link rel="preload" href="/myBlog/assets/js/2.71aee22e.js" as="script"><link rel="preload" href="/myBlog/assets/js/66.1ac41917.js" as="script"><link rel="prefetch" href="/myBlog/assets/js/10.3d25eb47.js"><link rel="prefetch" href="/myBlog/assets/js/11.ab73ac07.js"><link rel="prefetch" href="/myBlog/assets/js/12.c93b5f8f.js"><link rel="prefetch" href="/myBlog/assets/js/13.46142694.js"><link rel="prefetch" href="/myBlog/assets/js/14.d1eb19d3.js"><link rel="prefetch" href="/myBlog/assets/js/15.4f3be701.js"><link rel="prefetch" href="/myBlog/assets/js/16.d3a50c19.js"><link rel="prefetch" href="/myBlog/assets/js/17.1782e791.js"><link rel="prefetch" href="/myBlog/assets/js/18.aedf8fc2.js"><link rel="prefetch" href="/myBlog/assets/js/19.52f93c66.js"><link rel="prefetch" href="/myBlog/assets/js/20.945ea81e.js"><link rel="prefetch" href="/myBlog/assets/js/21.68742e5e.js"><link rel="prefetch" href="/myBlog/assets/js/22.e4862435.js"><link rel="prefetch" href="/myBlog/assets/js/23.b84bc457.js"><link rel="prefetch" href="/myBlog/assets/js/24.7d95266b.js"><link rel="prefetch" href="/myBlog/assets/js/25.e2bca76f.js"><link rel="prefetch" href="/myBlog/assets/js/26.6c1b3c9e.js"><link rel="prefetch" href="/myBlog/assets/js/27.777f7e45.js"><link rel="prefetch" href="/myBlog/assets/js/28.4fe055b7.js"><link rel="prefetch" href="/myBlog/assets/js/29.e9f55299.js"><link rel="prefetch" href="/myBlog/assets/js/3.108c6b96.js"><link rel="prefetch" href="/myBlog/assets/js/30.d8ce14ab.js"><link rel="prefetch" href="/myBlog/assets/js/31.2acce8ba.js"><link rel="prefetch" href="/myBlog/assets/js/32.363d94d6.js"><link rel="prefetch" href="/myBlog/assets/js/33.338651a6.js"><link rel="prefetch" href="/myBlog/assets/js/34.4df04394.js"><link rel="prefetch" href="/myBlog/assets/js/35.444fbcbb.js"><link rel="prefetch" href="/myBlog/assets/js/36.550492c4.js"><link rel="prefetch" href="/myBlog/assets/js/37.b071b233.js"><link rel="prefetch" href="/myBlog/assets/js/38.f72cc43c.js"><link rel="prefetch" href="/myBlog/assets/js/39.743b401e.js"><link rel="prefetch" href="/myBlog/assets/js/4.b2fb6724.js"><link rel="prefetch" href="/myBlog/assets/js/40.7633404e.js"><link rel="prefetch" href="/myBlog/assets/js/41.9ba2ac1e.js"><link rel="prefetch" href="/myBlog/assets/js/42.2cdc200d.js"><link rel="prefetch" href="/myBlog/assets/js/43.f1d47857.js"><link rel="prefetch" href="/myBlog/assets/js/44.e243ce38.js"><link rel="prefetch" href="/myBlog/assets/js/45.a2d5f6f5.js"><link rel="prefetch" href="/myBlog/assets/js/46.3521ca2a.js"><link rel="prefetch" href="/myBlog/assets/js/47.3a7c7136.js"><link rel="prefetch" href="/myBlog/assets/js/48.197d2a7c.js"><link rel="prefetch" href="/myBlog/assets/js/49.5e2e4744.js"><link rel="prefetch" href="/myBlog/assets/js/5.437538ff.js"><link rel="prefetch" href="/myBlog/assets/js/50.79047c1c.js"><link rel="prefetch" href="/myBlog/assets/js/51.5d83f071.js"><link rel="prefetch" href="/myBlog/assets/js/52.bc93cc4a.js"><link rel="prefetch" href="/myBlog/assets/js/53.ea4ac953.js"><link rel="prefetch" href="/myBlog/assets/js/54.f2c29859.js"><link rel="prefetch" href="/myBlog/assets/js/55.9ab739c5.js"><link rel="prefetch" href="/myBlog/assets/js/56.962bd4e7.js"><link rel="prefetch" href="/myBlog/assets/js/57.76eba6f4.js"><link rel="prefetch" href="/myBlog/assets/js/58.34f41ce8.js"><link rel="prefetch" href="/myBlog/assets/js/59.95fec2e7.js"><link rel="prefetch" href="/myBlog/assets/js/6.227c43d9.js"><link rel="prefetch" href="/myBlog/assets/js/60.ac8b84f4.js"><link rel="prefetch" href="/myBlog/assets/js/61.56373d52.js"><link rel="prefetch" href="/myBlog/assets/js/62.b2dbafb4.js"><link rel="prefetch" href="/myBlog/assets/js/63.f97f80e6.js"><link rel="prefetch" href="/myBlog/assets/js/64.7d6f4123.js"><link rel="prefetch" href="/myBlog/assets/js/65.e0130689.js"><link rel="prefetch" href="/myBlog/assets/js/67.5d5c6567.js"><link rel="prefetch" href="/myBlog/assets/js/68.752b8f0c.js"><link rel="prefetch" href="/myBlog/assets/js/69.c8c67836.js"><link rel="prefetch" href="/myBlog/assets/js/7.11bc8d9a.js"><link rel="prefetch" href="/myBlog/assets/js/70.80d68f41.js"><link rel="prefetch" href="/myBlog/assets/js/8.d109144b.js"><link rel="prefetch" href="/myBlog/assets/js/9.49c8893d.js">
+    <link rel="stylesheet" href="/myBlog/assets/css/0.styles.94ac365d.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/myBlog/" class="home-link router-link-active"><!----> <span class="site-name">卷心菜的笔记</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/myBlog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/myBlog/js_docs/" class="nav-link">
+  JS
+</a></div><div class="nav-item"><a href="/myBlog/css_docs/" class="nav-link">
+  CSS
+</a></div><div class="nav-item"><a href="/myBlog/vue_docs/" class="nav-link">
+  Vue
+</a></div><div class="nav-item"><a href="/myBlog/ts_docs/" class="nav-link router-link-active">
+  TS
+</a></div><div class="nav-item"><a href="/myBlog/uni_docs/" class="nav-link">
+  Uni
+</a></div><div class="nav-item"><a href="/myBlog/node_docs/" class="nav-link">
+  Node
+</a></div><div class="nav-item"><a href="/myBlog/other/" class="nav-link">
+  啥都有
+</a></div><div class="nav-item"><a href="/myBlog/painting/" class="nav-link">
+  朋友的画
+</a></div><div class="nav-item"><a href="https://github.com/zeroonbush/blog.git" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/myBlog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/myBlog/js_docs/" class="nav-link">
+  JS
+</a></div><div class="nav-item"><a href="/myBlog/css_docs/" class="nav-link">
+  CSS
+</a></div><div class="nav-item"><a href="/myBlog/vue_docs/" class="nav-link">
+  Vue
+</a></div><div class="nav-item"><a href="/myBlog/ts_docs/" class="nav-link router-link-active">
+  TS
+</a></div><div class="nav-item"><a href="/myBlog/uni_docs/" class="nav-link">
+  Uni
+</a></div><div class="nav-item"><a href="/myBlog/node_docs/" class="nav-link">
+  Node
+</a></div><div class="nav-item"><a href="/myBlog/other/" class="nav-link">
+  啥都有
+</a></div><div class="nav-item"><a href="/myBlog/painting/" class="nav-link">
+  朋友的画
+</a></div><div class="nav-item"><a href="https://github.com/zeroonbush/blog.git" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/myBlog/ts_docs/" aria-current="page" class="sidebar-link">TS(typeScript)相关</a></li><li><a href="/myBlog/ts_docs/基本类型.html" class="sidebar-link">TS中的类型</a></li><li><a href="/myBlog/ts_docs/数据类型的使用.html" class="active sidebar-link">数据类型的使用</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/myBlog/ts_docs/数据类型的使用.html#显式类型" class="sidebar-link">显式类型</a></li><li class="sidebar-sub-header"><a href="/myBlog/ts_docs/数据类型的使用.html#隐式类型" class="sidebar-link">隐式类型</a></li><li class="sidebar-sub-header"><a href="/myBlog/ts_docs/数据类型的使用.html#类型的别名" class="sidebar-link">类型的别名</a></li></ul></li><li><a href="/myBlog/ts_docs/编译类型.html" class="sidebar-link">编译类型(配置文件)</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="数据类型的使用"><a href="#数据类型的使用" class="header-anchor">#</a> 数据类型的使用</h1> <h2 id="显式类型"><a href="#显式类型" class="header-anchor">#</a> 显式类型</h2> <div class="language- extra-class"><pre class="language-text"><code>//number
+let a:number // a被设置成了number类型，往后赋值只能为数字
+a = 1 // 正确赋值
+a = &quot;1&quot; || true || ..... // TS编译器会报错
+
+//string
+let a:string //a被设置成了string类型，往后赋值只能为字符串
+a = &quot;hello&quot; // 正确赋值
+a = 1 || true || ..... // TS编译器会报错
+
+//boolean
+let a:boolean //a被设置成了boolean类型，往后赋值只能为布尔值
+a = true || false // 正确赋值
+a = 1 || &quot;1&quot; || ..... // TS编译器会报错
+
+//字面量
+let a:1 //a被设置成了字面量1，往后a赋值只能为1
+a = 1 // 正确赋值
+a = ..... // 任何值TS编译器都会报错
+
+// 也可以这样写定义多个
+let a:number | string
+此时a的可以被设置成字符串或数字
+
+// any
+let a:any
+a = 1 || true || &quot;1&quot; || ....
+// 设置any可以赋值任意类型的值，相当于关闭了TS的类型校验
+
+// unknown
+let a:unknown // 设置unknown可以赋值任意类型的值，类似于any
+
+// unknown与any的区别
+let a:any
+let b:unknown
+let c:string
+
+c = a // any可以给任意类型赋值，但是会影响被赋值变量的类型 let c:string 变成了 c:any
+
+c = b // TS编译器会报错，不能直接赋值给string类型
+
+// 需要这样赋值(类型校验) OR 类型断言
+
+if(typeof b === 'string' ){
+    &lt;!-- 类型校验 --&gt;
+    c = b // TS编译器不会报错，正常赋值
+}
+
+c = b as string // 类型断言 可以用来告诉解析器变量的实际类型 类似于 c = &lt;string&gt;b
+注意：不可 c = b&lt;string&gt;
+
+// void
+function fn():void{
+    return 1 || ......  //  编译器报错
+    return undefined // ok
+    return // ok
+}
+
+// never
+function fn():never{
+    return ......  //  编译器报错 不能有任何返回值 不常用
+}
+
+// object
+let a:object //有点鸡肋 很少使用常用来限制对象里的值，而不是限制类型
+
+let b:{ name:string } // 对象里的值名为name且值必须是字符串
+b = {
+    name:&quot;333&quot;
+}
+
+let d:{ name:string, [proName:string]:any}
+// 表示对象中除name外可以有任意类型的键值
+
+let e:{ name:string, age?:number } // 表示对象中必须有一个name属性且值为string，age可填可不填
+
+// array
+
+// 类型[] || Array&lt;类型&gt;
+
+let a:string[] // a被设置成了数组类型，且往后赋值只能为string
+
+let a:number[] // 意义同上
+
+let a:Array&lt;number&gt; // 同 a:number 一样数组中只能包含数字
+
+// tuple(固定长度的数组)
+[类型,类型]
+
+let a:[string,number] // a的类型为数组，且a中的内容第一个只能是string，第二个是number
+且不存在第三个
+
+// enum(枚举)
+
+enum a {
+    b = 0,
+    c = &quot;你好&quot;
+}
+
+用法 let d = a.b || a.c
+
+// 函数的使用
+
+let a:(a:number,b:number) =&gt; number
+//定义一个方法 参数都为number ，返回值也会number
+
+a = function(a,b){
+    return 值 // number
+}
+
+function sum(a:number,b:number){
+    return a+b
+}
+
+sum(123,456) // return 579
+sum(123,&quot;456&quot;) // TS编译器会报错
+
+// 定义方法的返回值类型为number
+function sum(a,b):number{
+    return a+b
+}
+
+sum(&quot;hello&quot;,&quot;word&quot;) // return &quot;helloword&quot; TS编译器会报错
+
+</code></pre></div><h2 id="隐式类型"><a href="#隐式类型" class="header-anchor">#</a> 隐式类型</h2> <div class="language- extra-class"><pre class="language-text"><code>let a;
+// TS编译器会把a的类型设置为any let a:any
+
+let a = 1
+// TS编译器会把a的类型设置为number let a:number
+
+let a = &quot;1&quot;
+// TS编译器会把a的类型设置为string let a:string
+
+let a = true || false
+// TS编译器会把a的类型设置为boolean let a:boolean
+</code></pre></div><h2 id="类型的别名"><a href="#类型的别名" class="header-anchor">#</a> 类型的别名</h2> <div class="language- extra-class"><pre class="language-text"><code>let a: 1 | 2 | 3 | 5
+let b: 1 | 2 | 3 | 5
+
+// 上发过于麻烦且不清晰，定义一个类型别名
+// 语法
+
+type 别名 = 类型
+
+type numList = 1 | 2 | 3 | 5
+
+let a:numList == let a: 1 | 2 | 3 | 5
+
+
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/myBlog/ts_docs/基本类型.html" class="prev">
+        TS中的类型
+      </a></span> <span class="next"><a href="/myBlog/ts_docs/编译类型.html">
+        编译类型(配置文件)
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/myBlog/assets/js/app.32b125a5.js" defer></script><script src="/myBlog/assets/js/2.71aee22e.js" defer></script><script src="/myBlog/assets/js/66.1ac41917.js" defer></script>
+  </body>
+</html>

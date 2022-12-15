@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Flutter构建Android APP | 卷心菜的笔记</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/myBlog/logo.jpg">
+    <meta name="description" content="我的个人网站">
+    
+    <link rel="preload" href="/myBlog/assets/css/0.styles.94ac365d.css" as="style"><link rel="preload" href="/myBlog/assets/js/app.32b125a5.js" as="script"><link rel="preload" href="/myBlog/assets/js/2.71aee22e.js" as="script"><link rel="preload" href="/myBlog/assets/js/49.5e2e4744.js" as="script"><link rel="prefetch" href="/myBlog/assets/js/10.3d25eb47.js"><link rel="prefetch" href="/myBlog/assets/js/11.ab73ac07.js"><link rel="prefetch" href="/myBlog/assets/js/12.c93b5f8f.js"><link rel="prefetch" href="/myBlog/assets/js/13.46142694.js"><link rel="prefetch" href="/myBlog/assets/js/14.d1eb19d3.js"><link rel="prefetch" href="/myBlog/assets/js/15.4f3be701.js"><link rel="prefetch" href="/myBlog/assets/js/16.d3a50c19.js"><link rel="prefetch" href="/myBlog/assets/js/17.1782e791.js"><link rel="prefetch" href="/myBlog/assets/js/18.aedf8fc2.js"><link rel="prefetch" href="/myBlog/assets/js/19.52f93c66.js"><link rel="prefetch" href="/myBlog/assets/js/20.945ea81e.js"><link rel="prefetch" href="/myBlog/assets/js/21.68742e5e.js"><link rel="prefetch" href="/myBlog/assets/js/22.e4862435.js"><link rel="prefetch" href="/myBlog/assets/js/23.b84bc457.js"><link rel="prefetch" href="/myBlog/assets/js/24.7d95266b.js"><link rel="prefetch" href="/myBlog/assets/js/25.e2bca76f.js"><link rel="prefetch" href="/myBlog/assets/js/26.6c1b3c9e.js"><link rel="prefetch" href="/myBlog/assets/js/27.777f7e45.js"><link rel="prefetch" href="/myBlog/assets/js/28.4fe055b7.js"><link rel="prefetch" href="/myBlog/assets/js/29.e9f55299.js"><link rel="prefetch" href="/myBlog/assets/js/3.108c6b96.js"><link rel="prefetch" href="/myBlog/assets/js/30.d8ce14ab.js"><link rel="prefetch" href="/myBlog/assets/js/31.2acce8ba.js"><link rel="prefetch" href="/myBlog/assets/js/32.363d94d6.js"><link rel="prefetch" href="/myBlog/assets/js/33.338651a6.js"><link rel="prefetch" href="/myBlog/assets/js/34.4df04394.js"><link rel="prefetch" href="/myBlog/assets/js/35.444fbcbb.js"><link rel="prefetch" href="/myBlog/assets/js/36.550492c4.js"><link rel="prefetch" href="/myBlog/assets/js/37.b071b233.js"><link rel="prefetch" href="/myBlog/assets/js/38.f72cc43c.js"><link rel="prefetch" href="/myBlog/assets/js/39.743b401e.js"><link rel="prefetch" href="/myBlog/assets/js/4.b2fb6724.js"><link rel="prefetch" href="/myBlog/assets/js/40.7633404e.js"><link rel="prefetch" href="/myBlog/assets/js/41.9ba2ac1e.js"><link rel="prefetch" href="/myBlog/assets/js/42.2cdc200d.js"><link rel="prefetch" href="/myBlog/assets/js/43.f1d47857.js"><link rel="prefetch" href="/myBlog/assets/js/44.e243ce38.js"><link rel="prefetch" href="/myBlog/assets/js/45.a2d5f6f5.js"><link rel="prefetch" href="/myBlog/assets/js/46.3521ca2a.js"><link rel="prefetch" href="/myBlog/assets/js/47.3a7c7136.js"><link rel="prefetch" href="/myBlog/assets/js/48.197d2a7c.js"><link rel="prefetch" href="/myBlog/assets/js/5.437538ff.js"><link rel="prefetch" href="/myBlog/assets/js/50.79047c1c.js"><link rel="prefetch" href="/myBlog/assets/js/51.5d83f071.js"><link rel="prefetch" href="/myBlog/assets/js/52.bc93cc4a.js"><link rel="prefetch" href="/myBlog/assets/js/53.ea4ac953.js"><link rel="prefetch" href="/myBlog/assets/js/54.f2c29859.js"><link rel="prefetch" href="/myBlog/assets/js/55.9ab739c5.js"><link rel="prefetch" href="/myBlog/assets/js/56.962bd4e7.js"><link rel="prefetch" href="/myBlog/assets/js/57.76eba6f4.js"><link rel="prefetch" href="/myBlog/assets/js/58.34f41ce8.js"><link rel="prefetch" href="/myBlog/assets/js/59.95fec2e7.js"><link rel="prefetch" href="/myBlog/assets/js/6.227c43d9.js"><link rel="prefetch" href="/myBlog/assets/js/60.ac8b84f4.js"><link rel="prefetch" href="/myBlog/assets/js/61.56373d52.js"><link rel="prefetch" href="/myBlog/assets/js/62.b2dbafb4.js"><link rel="prefetch" href="/myBlog/assets/js/63.f97f80e6.js"><link rel="prefetch" href="/myBlog/assets/js/64.7d6f4123.js"><link rel="prefetch" href="/myBlog/assets/js/65.e0130689.js"><link rel="prefetch" href="/myBlog/assets/js/66.1ac41917.js"><link rel="prefetch" href="/myBlog/assets/js/67.5d5c6567.js"><link rel="prefetch" href="/myBlog/assets/js/68.752b8f0c.js"><link rel="prefetch" href="/myBlog/assets/js/69.c8c67836.js"><link rel="prefetch" href="/myBlog/assets/js/7.11bc8d9a.js"><link rel="prefetch" href="/myBlog/assets/js/70.80d68f41.js"><link rel="prefetch" href="/myBlog/assets/js/8.d109144b.js"><link rel="prefetch" href="/myBlog/assets/js/9.49c8893d.js">
+    <link rel="stylesheet" href="/myBlog/assets/css/0.styles.94ac365d.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/myBlog/" class="home-link router-link-active"><!----> <span class="site-name">卷心菜的笔记</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/myBlog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/myBlog/js_docs/" class="nav-link">
+  JS
+</a></div><div class="nav-item"><a href="/myBlog/css_docs/" class="nav-link">
+  CSS
+</a></div><div class="nav-item"><a href="/myBlog/vue_docs/" class="nav-link">
+  Vue
+</a></div><div class="nav-item"><a href="/myBlog/ts_docs/" class="nav-link">
+  TS
+</a></div><div class="nav-item"><a href="/myBlog/uni_docs/" class="nav-link">
+  Uni
+</a></div><div class="nav-item"><a href="/myBlog/node_docs/" class="nav-link">
+  Node
+</a></div><div class="nav-item"><a href="/myBlog/other/" class="nav-link router-link-active">
+  啥都有
+</a></div><div class="nav-item"><a href="/myBlog/painting/" class="nav-link">
+  朋友的画
+</a></div><div class="nav-item"><a href="https://github.com/zeroonbush/blog.git" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/myBlog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/myBlog/js_docs/" class="nav-link">
+  JS
+</a></div><div class="nav-item"><a href="/myBlog/css_docs/" class="nav-link">
+  CSS
+</a></div><div class="nav-item"><a href="/myBlog/vue_docs/" class="nav-link">
+  Vue
+</a></div><div class="nav-item"><a href="/myBlog/ts_docs/" class="nav-link">
+  TS
+</a></div><div class="nav-item"><a href="/myBlog/uni_docs/" class="nav-link">
+  Uni
+</a></div><div class="nav-item"><a href="/myBlog/node_docs/" class="nav-link">
+  Node
+</a></div><div class="nav-item"><a href="/myBlog/other/" class="nav-link router-link-active">
+  啥都有
+</a></div><div class="nav-item"><a href="/myBlog/painting/" class="nav-link">
+  朋友的画
+</a></div><div class="nav-item"><a href="https://github.com/zeroonbush/blog.git" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/myBlog/other/" aria-current="page" class="sidebar-link">第一篇博客在这里,你找到了吗</a></li><li><a href="/myBlog/other/tool.html" class="sidebar-link">工具篇</a></li><li><a href="/myBlog/other/vuepress搭建个人博客并部署.html" class="sidebar-link">vuepress搭建个人博客并部署</a></li><li><a href="/myBlog/other/Git常用指令.html" class="sidebar-link">Git常用指令</a></li><li><a href="/myBlog/other/Markdown语法.html" class="sidebar-link">Markdown语法指南</a></li><li><a href="/myBlog/other/npm发包流程.html" class="sidebar-link">npm发包流程</a></li><li><a href="/myBlog/other/发行ERC20代币.html" class="sidebar-link">如何基于ERC20发行自己的代币</a></li><li><a href="/myBlog/other/Flutter构建Android包.html" class="active sidebar-link">Flutter构建Android APP</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/myBlog/other/Flutter构建Android包.html#创建密钥库-keystore" class="sidebar-link">创建密钥库 keystore</a></li><li class="sidebar-sub-header"><a href="/myBlog/other/Flutter构建Android包.html#引用keystore" class="sidebar-link">引用keystore</a></li><li class="sidebar-sub-header"><a href="/myBlog/other/Flutter构建Android包.html#配置签名" class="sidebar-link">配置签名</a></li><li class="sidebar-sub-header"><a href="/myBlog/other/Flutter构建Android包.html#构建apk包" class="sidebar-link">构建apk包</a></li></ul></li><li><a href="/myBlog/other/简简单单的来入个deno的门吧.html" class="sidebar-link">deno入门指南</a></li><li><a href="/myBlog/other/移动端300ms延迟以及点击穿透.html" class="sidebar-link">移动端300ms延迟以及点击穿透</a></li><li><a href="/myBlog/other/来了解下字符编码的历史吧.html" class="sidebar-link">来了解下字符编码的历史吧</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="flutter构建android-app"><a href="#flutter构建android-app" class="header-anchor">#</a> Flutter构建Android APP</h1> <blockquote><p>在完成项目开发后,我们就想要将我们的代码打包成一个apk的包,以提供给别人使用.</p></blockquote> <h2 id="创建密钥库-keystore"><a href="#创建密钥库-keystore" class="header-anchor">#</a> 创建密钥库 keystore</h2> <div class="language- extra-class"><pre class="language-text"><code>keytool -genkey -v -keystore ~/key.jks -keyalg RSA -keysize 2048 -validity 10000 -alias key
+</code></pre></div><p>上面的操作会要求我们输入两次密码后再让我们填写一些基本信息.
+不想填写的信息,我们可以直接回车跳过,最后出现</p> <div class="language- extra-class"><pre class="language-text"><code>Is CN=Unknown, OU=Unknown, O=Unknown, L=Unknown, ST=Unknown, C=Unknown correct?
+  [no]: 
+</code></pre></div><p>我们直接按<code>y</code>就可以了.然后又要求我们输入密钥密码,我们可以直接回车设置成和密钥库一样的密码.最后出现如下:</p> <div class="language- extra-class"><pre class="language-text"><code>[Storing /Users/xxx/key.jks]
+</code></pre></div><p>就证明密钥库已经生成成功了,并且上面的就是文件所在的路径.</p> <p><strong>注意:</strong> 此文件需要保密,不要将其放到github等上面去</p> <h2 id="引用keystore"><a href="#引用keystore" class="header-anchor">#</a> 引用keystore</h2> <p>在android目录下创建一个名为<code>key.properties</code>的文件,里面包含对keystore的引用:</p> <div class="language- extra-class"><pre class="language-text"><code>storePassword=123456
+keyPassword=123456
+keyAlias=key
+storeFile=/Users/xxx/key.jks
+</code></pre></div><ul><li>storeFile的路径是密钥库的路径,就是我们之前生成的路径</li> <li>keyAlias是别名,在我们第一步命令的时候赋予</li> <li>keyPassword和storePassword就是密钥和密钥库的密码了,我们前面也设置了</li></ul> <h2 id="配置签名"><a href="#配置签名" class="header-anchor">#</a> 配置签名</h2> <p>编辑<code>android/app/build.gradle</code>文件为应用配置签名</p> <ul><li>替换</li></ul> <div class="language- extra-class"><pre class="language-text"><code>android {
+</code></pre></div><p>变成:</p> <div class="language- extra-class"><pre class="language-text"><code>def keystorePropertiesFile = rootProject.file(&quot;key.properties&quot;)
+def keystoreProperties = new Properties()
+keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+
+android {
+</code></pre></div><hr> <ul><li>替换</li></ul> <div class="language- extra-class"><pre class="language-text"><code>buildTypes {
+    release {
+        // TODO: Add your own signing config for the release build.
+        // Signing with the debug keys for now, so `flutter run --release` works.
+        signingConfig signingConfigs.debug
+    }
+}
+</code></pre></div><p>变成:</p> <div class="language- extra-class"><pre class="language-text"><code>signingConfigs {
+    release {
+        keyAlias keystoreProperties['keyAlias']
+        keyPassword keystoreProperties['keyPassword']
+        storeFile file(keystoreProperties['storeFile'])
+        storePassword keystoreProperties['storePassword']
+    }
+}
+buildTypes {
+    release {
+        signingConfig signingConfigs.release
+    }
+}
+</code></pre></div><h2 id="构建apk包"><a href="#构建apk包" class="header-anchor">#</a> 构建apk包</h2> <p>在项目目录下运行</p> <div class="language- extra-class"><pre class="language-text"><code>flutter build apk
+</code></pre></div><p>当看到类似如下这样的提示,则表示已经构建成功,并且告诉了我们构建成功的apk的路径.</p> <div class="language- extra-class"><pre class="language-text"><code>Running Gradle task 'assembleRelease'...            
+Running Gradle task 'assembleRelease'... Done   59.8s
+✓ Built build/app/outputs/apk/release/app-release.apk (16.1MB).
+</code></pre></div><p>自此,我们的项目构建就完成了,我们可以将包发给别人安装或者提交到应用商店.</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/myBlog/other/发行ERC20代币.html" class="prev">
+        如何基于ERC20发行自己的代币
+      </a></span> <span class="next"><a href="/myBlog/other/简简单单的来入个deno的门吧.html">
+        deno入门指南
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/myBlog/assets/js/app.32b125a5.js" defer></script><script src="/myBlog/assets/js/2.71aee22e.js" defer></script><script src="/myBlog/assets/js/49.5e2e4744.js" defer></script>
+  </body>
+</html>
